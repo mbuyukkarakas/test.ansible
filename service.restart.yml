@@ -1,6 +1,6 @@
 ---
 - name: Restart chronyD  Service
-  hosts: "{{ hosts }}"
+  hosts: "zabbix"
   become: yes
 
   tasks:
