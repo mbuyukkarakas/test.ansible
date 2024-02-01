@@ -1,0 +1,16 @@
+---
+- name: Restart chronyD  Service
+  hosts: "{{ hosts }}"
+  become: yes
+
+  tasks:
+    - name: Ensure chronyD service is running
+      systemd:
+        name: chronyd
+        state: started
+      ignore_errors: yes
+
+    - name: Restart chronyD service
+      systemd:
+        name: chronyd
+        state: restarted
