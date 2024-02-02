@@ -1,0 +1,7 @@
+---
+- hosts: {{ host }}
+  tasks:
+   - name: Restart service {{ service }}
+     win_service:
+       name: {{ service }}
+       state: restarted
