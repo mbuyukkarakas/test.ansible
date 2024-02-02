@@ -1,0 +1,4 @@
+- hosts: windows
+  tasks:
+  - name: Single line PowerShell
+    win_shell: get-alias
