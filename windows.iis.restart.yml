@@ -1,0 +1,7 @@
+---
+- hosts: "{{ host }}"
+  tasks:
+   - name: Restart service W3SVC
+     win_service:
+       name: W3SVC
+       state: restarted
