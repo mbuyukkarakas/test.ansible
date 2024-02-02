@@ -1,0 +1,10 @@
+---
+- name: Restart Redis service
+  hosts: "{{ host }}"
+  become: yes
+
+  tasks:
+    - name: Restart Redis service
+      systemd:
+        name: redis.service
+        state: restarted
