@@ -1,4 +1,4 @@
-- hosts: windows
+- hosts: "{{ host }}"
   tasks:
-  - name: Single line PowerShell
-    win_shell: get-alias
+  - name: Restart IIS pool
+    win_shell: Restart-WebAppPool -Name "{{ iispool }}"
